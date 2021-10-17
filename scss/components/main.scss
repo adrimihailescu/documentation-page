@@ -1,0 +1,49 @@
+.main-doc-wrapper {
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+  align-items: center;
+  padding: 20px;
+
+  @media screen and (max-width: "600px") {
+    height: 80vh;
+  }
+}
+
+.main-section {
+  position: relative;
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: -50px;
+    left: 10%;
+    width: 80%;
+    height: 2px;
+    background: chocolate;
+  }
+
+  &:not(:first-of-type) {
+    margin-top: 100px;
+  }
+
+  header {
+    font-size: 1.8rem;
+    // text-transform: uppercase;
+  }
+
+  code {
+    background: #eee;
+    padding: 10px;
+    margin: 10px 0;
+    display: block;
+  }
+
+  p > code {
+    display: inline;
+    padding: 3px 5px;
+    margin: auto;
+    color: chocolate;
+    font-weight: 600;
+  }
+}
